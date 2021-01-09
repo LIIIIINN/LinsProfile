@@ -1278,15 +1278,21 @@ img {
   width: 100%;
   height: 280px;
   padding-left: 15px;
-  margin-top: 32px;
+  margin-bottom: 20px;
 }
 @media only screen and (max-width: 760px) {
   .page .resume--bg__resume .page__resume .resume--content .skills-format .skills--block .skills--content--settings {
     font-size: 0.7em;
+    height: 200px;
   }
 }
 .page .resume--bg__resume .page__resume .resume--content .skills-format .skills--block:hover {
   margin-top: -220px;
+}
+@media only screen and (max-width: 760px) {
+  .page .resume--bg__resume .page__resume .resume--content .skills-format .skills--block:hover {
+    margin-top: -350px;
+  }
 }
 .page .resume--bg__resume .page__resume .resume--content .skills-format:hover {
   transition: all 0.3s;
