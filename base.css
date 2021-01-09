@@ -72,13 +72,18 @@ img {
   position: relative;
   font-size: 4em;
 }
+@media only screen and (max-width: 760px) {
+  .title--setting {
+    font-size: 3em;
+  }
+}
 
 .pseudo--item--undersocre::before {
   position: absolute;
   content: "";
   top: 20px;
-  left: -15%;
-  width: 130%;
+  left: 0;
+  width: 100%;
   height: 5px;
   background: #E7CAA1;
   border-radius: 10px;
@@ -103,6 +108,8 @@ img {
 
 .p--font--size {
   font-size: 1.2em;
+  margin-top: 10px;
+  padding: 5px;
   color: white;
 }
 
@@ -285,40 +292,57 @@ img {
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
 }
 
+@media only screen and (max-width: 980px) {
+  .responsive--font--resize {
+    font-size: 0.75em;
+  }
+}
+
 /*body style settings */
 .page {
   width: 100%;
   height: auto;
 }
 .page__header {
-  width: inherit;
+  width: 100%;
   max-height: 80px;
   background: linear-gradient(0.25turn, #a2d2ff, #ebf8e1, #bde0fe);
-  display: block;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   position: fixed;
   top: -100px;
   opacity: 1;
   z-index: 100;
   transition: all 0.3s;
 }
-.page__header .nav--bar {
-  width: 46.6666666667%;
+.page__header .nav--width--settings {
+  width: 70%;
+}
+.page__header .nav--width--settings .nav--bar {
+  width: 90%;
   height: inherit;
   color: #0d4570;
   margin: auto;
   padding-top: 20px;
   padding-bottom: 20px;
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
+}
+@media only screen and (max-width: 980px) {
+  .page__header .nav--width--settings .nav--bar {
+    display: none;
+  }
 }
 .page__header #nav--bar--display {
   width: 100%;
   height: 0;
   background-color: white;
   color: white;
-  padding-left: 50px;
+  padding-left: 10%;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -334,11 +358,8 @@ img {
   }
 }
 @media only screen and (max-width: 980px) {
-  .page__header .nav--bar {
-    display: none;
-  }
   .page__header .nav--bar--mobile {
-    width: 90%;
+    width: 80%;
     height: inherit;
     color: #0d4570;
     margin: auto;
@@ -394,13 +415,18 @@ img {
   bottom: 100px;
   width: 20px;
   height: 20px;
-  border-bottom: 2px solid #4d4a4a;
-  border-right: 2px solid #4d4a4a;
+  border-bottom: 2px solid white;
+  border-right: 2px solid white;
   transform: rotate(45deg);
   cursor: pointer;
 }
 .page__home .landing--font--setting {
   color: whitesmoke;
+}
+@media only screen and (max-width: 760px) {
+  .page__home .landing--font--setting {
+    font-size: 0.9em;
+  }
 }
 .page__about {
   width: 70%;
@@ -451,6 +477,12 @@ img {
   position: relative;
   background-color: white;
   border-radius: 50%;
+}
+@media only screen and (max-width: 760px) {
+  .page__about--info .middle--bar .company .company--logo {
+    width: 50px;
+    height: 50px;
+  }
 }
 .page__about--info .middle--bar .company .company--logo:hover {
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
@@ -530,6 +562,12 @@ img {
   transition: 1s box-shadow;
   cursor: pointer;
 }
+@media only screen and (max-width: 760px) {
+  .page__about--info .right--bar .btn--container .btn--format--download {
+    width: 100px;
+    height: 100px;
+  }
+}
 .page__about--info .right--bar .btn--container .btn--format--download:hover {
   box-shadow: 0 5px 35px 0px rgba(0, 0, 0, 0.1);
 }
@@ -543,6 +581,12 @@ img {
   border-radius: 75px;
   z-index: -1;
   animation: 1s clockwise infinite;
+}
+@media only screen and (max-width: 760px) {
+  .page__about--info .right--bar .btn--container .btn--format--download:hover::before, .page__about--info .right--bar .btn--container .btn--format--download:hover::after {
+    width: 100px;
+    height: 100px;
+  }
 }
 .page__about--info .right--bar .btn--container .btn--format--download:hover:after {
   background: #F3CE5E;
@@ -563,7 +607,7 @@ img {
   }
   37% {
     top: 2px;
-    eft: 2px;
+    left: 2px;
   }
   50% {
     top: 5px;
@@ -691,133 +735,163 @@ img {
   }
   */
   /* for Version 1.0 use
-              .pseudo--item--utas ::before{
+                  .pseudo--item--utas ::before{
 
-                  content: "";
-                  display: inline-block;
-                  position: absolute;
-                  //background-color: #fff;
-                  background-image: url("./images/icons/utas.png");
-                  background-size: cover;
-                  background-position: center;
-                  background-repeat: no-repeat;
-                  border-radius: 50px;
-                  width: 60px;
-                  height: 60px;
-                  top: 5px;
-                  right: 20px;
-                  //left: -29px;
-                  //border: 2px solid #a2d2ff;
-                  //z-index: 2;
+                      content: "";
+                      display: inline-block;
+                      position: absolute;
+                      //background-color: #fff;
+                      background-image: url("./images/icons/utas.png");
+                      background-size: cover;
+                      background-position: center;
+                      background-repeat: no-repeat;
+                      border-radius: 50px;
+                      width: 60px;
+                      height: 60px;
+                      top: 5px;
+                      right: 20px;
+                      //left: -29px;
+                      //border: 2px solid #a2d2ff;
+                      //z-index: 2;
 
-                  @include responsiveLayoutAdjusting($L--TRIGGER--POINT){
+                      @include responsiveLayoutAdjusting($L--TRIGGER--POINT){
 
-                      top: 10px;
-                      //right: 20px;
-                      left: 8px;
+                          top: 10px;
+                          //right: 20px;
+                          left: 8px;
+                      }
                   }
-              }
-              .pseudo--item--ict ::before{
+                  .pseudo--item--ict ::before{
 
-                  content: "";
-                  display: inline-block;
-                  position: absolute;
-                  //background-color: #fff;
-                  background-image: url("./images/icons/zhongkeyuan.jpg");
-                  background-size: cover;
-                  background-position: center;
-                  background-repeat: no-repeat;
-                  border-radius: 50px;
-                  width: 60px;
-                  height: 60px;
-                  top: 5px;
-                  right: 20px;
-                  //border: 2px solid #a2d2ff;
-                  //z-index: 2;
+                      content: "";
+                      display: inline-block;
+                      position: absolute;
+                      //background-color: #fff;
+                      background-image: url("./images/icons/zhongkeyuan.jpg");
+                      background-size: cover;
+                      background-position: center;
+                      background-repeat: no-repeat;
+                      border-radius: 50px;
+                      width: 60px;
+                      height: 60px;
+                      top: 5px;
+                      right: 20px;
+                      //border: 2px solid #a2d2ff;
+                      //z-index: 2;
 
-                  @include responsiveLayoutAdjusting($L--TRIGGER--POINT){
+                      @include responsiveLayoutAdjusting($L--TRIGGER--POINT){
 
-                      top: 10px;
-                      //right: 20px;
-                      left: 8px;
+                          top: 10px;
+                          //right: 20px;
+                          left: 8px;
+                      }
                   }
-              }
 
-              .pseudo--item--buaa ::before{
+                  .pseudo--item--buaa ::before{
 
-                  content: "";
-                  display: inline-block;
-                  position: absolute;
-                  //background-color: #fff;
-                  background-image: url("./images/icons/beihang.png");
-                  background-size: cover;
-                  background-position: center;
-                  background-repeat: no-repeat;
-                  border-radius: 50px;
-                  width: 60px;
-                  height: 60px;
-                  top: 5px;
-                  right: 20px;
-                  //border: 2px solid #a2d2ff;
-                  //z-index: 2;
-                  @include responsiveLayoutAdjusting($L--TRIGGER--POINT){
+                      content: "";
+                      display: inline-block;
+                      position: absolute;
+                      //background-color: #fff;
+                      background-image: url("./images/icons/beihang.png");
+                      background-size: cover;
+                      background-position: center;
+                      background-repeat: no-repeat;
+                      border-radius: 50px;
+                      width: 60px;
+                      height: 60px;
+                      top: 5px;
+                      right: 20px;
+                      //border: 2px solid #a2d2ff;
+                      //z-index: 2;
+                      @include responsiveLayoutAdjusting($L--TRIGGER--POINT){
 
-                      top: 10px;
-                      //right: 20px;
-                      left: 8px;
+                          top: 10px;
+                          //right: 20px;
+                          left: 8px;
+                      }
                   }
-              }
 
-              .pseudo--item--dtt ::before{
+                  .pseudo--item--dtt ::before{
 
-                  content: "";
-                  display: inline-block;
-                  position: absolute;
-                  background-image: url("./images/icons/DTT.png");
-                  background-size: cover;
-                  background-position: center;
-                  background-repeat: no-repeat;
-                  border-radius: 50px;
-                  width: 60px;
-                  height: 60px;
-                  top: 5px;
-                  right: 20px;
-                  @include responsiveLayoutAdjusting($L--TRIGGER--POINT){
+                      content: "";
+                      display: inline-block;
+                      position: absolute;
+                      background-image: url("./images/icons/DTT.png");
+                      background-size: cover;
+                      background-position: center;
+                      background-repeat: no-repeat;
+                      border-radius: 50px;
+                      width: 60px;
+                      height: 60px;
+                      top: 5px;
+                      right: 20px;
+                      @include responsiveLayoutAdjusting($L--TRIGGER--POINT){
 
-                      top: 10px;
-                      //right: 20px;
-                      left: -8px;
+                          top: 10px;
+                          //right: 20px;
+                          left: -8px;
+                      }
                   }
-              }
 
-              .pseudo--item--ysu ::before{
+                  .pseudo--item--ysu ::before{
 
-                  content: "";
-                  display: inline-block;
-                  position: absolute;
-                  background-image: url("./images/icons/Yanshan.png");
-                  background-size: cover;
-                  background-position: center;
-                  background-repeat: no-repeat;
-                  border-radius: 50px;
-                  width: 60px;
-                  height: 60px;
-                  top: 5px;
-                  right: 20px;
-                  @include responsiveLayoutAdjusting($L--TRIGGER--POINT){
+                      content: "";
+                      display: inline-block;
+                      position: absolute;
+                      background-image: url("./images/icons/Yanshan.png");
+                      background-size: cover;
+                      background-position: center;
+                      background-repeat: no-repeat;
+                      border-radius: 50px;
+                      width: 60px;
+                      height: 60px;
+                      top: 5px;
+                      right: 20px;
+                      @include responsiveLayoutAdjusting($L--TRIGGER--POINT){
 
-                      top: 10px;
-                      //right: 20px;
-                      left: 8px;
+                          top: 10px;
+                          //right: 20px;
+                          left: 8px;
+                      }
                   }
-              }
 
+
+
+                  .pseudo--item--vline::before{
+
+                      content: "";
+                      display: inline-block;
+                      position: absolute;
+                      width: 2px;
+                      //height: 590px;
+                      height: 300%;
+                      top: 120px;
+                      background-color: #2E2B2B;
+                      left: -80px;
+                      z-index: 1;
+                      //border-radius: 75px;
+                  }
+
+                  .pseudo--item--edu--vline::before{
+
+                      content: "";
+                      display: inline-block;
+                      position: absolute;
+                      width: 2px;
+                      height: 390px;
+                      top: 120px;
+                      background-color: #2E2B2B;
+                      left: -80px;
+                      z-index: 1;
+                      //border-radius: 75px;
+                  }
   */
 }
 .page .resume--bg__resume .page__resume .resume--content--format {
   position: relative;
   width: 80%;
-  padding: 20px 20px 20px 40px;
+  padding: 20px;
   margin-bottom: 15px;
   margin-top: 15px;
   border: 1px solid whitesmoke;
@@ -827,6 +901,14 @@ img {
       padding-left: 80px;
       border-right: $BORDER--VALUE solid #C8E6EF;
   }*/
+}
+@media only screen and (max-width: 760px) {
+  .page .resume--bg__resume .page__resume .resume--content--format {
+    width: 100%;
+    font-size: 0.7em;
+    margin-left: 30px;
+    padding: 5px;
+  }
 }
 .page .resume--bg__resume .page__resume .resume--content .resume--content--format:hover {
   transition: all 0.3s;
@@ -884,7 +966,8 @@ img {
   position: absolute;
   top: -2px;
   left: -2px;
-  /*   width: 100%;
+  /*   
+    width: 100%;
     height: 100%; */
   width: 0;
   height: 0;
@@ -924,28 +1007,6 @@ img {
     border-left-color: transparent;
   }
 }
-.page .resume--bg__resume .page__resume .resume--content .pseudo--item--vline::before {
-  content: "";
-  display: inline-block;
-  position: absolute;
-  width: 2px;
-  height: 300%;
-  top: 120px;
-  background-color: #2E2B2B;
-  left: -80px;
-  z-index: 1;
-}
-.page .resume--bg__resume .page__resume .resume--content .pseudo--item--edu--vline::before {
-  content: "";
-  display: inline-block;
-  position: absolute;
-  width: 2px;
-  height: 390px;
-  top: 120px;
-  background-color: #2E2B2B;
-  left: -80px;
-  z-index: 1;
-}
 .page .resume--bg__resume .page__resume .resume--content .pseudo--item--utas ::before {
   content: "";
   display: inline-block;
@@ -962,6 +1023,14 @@ img {
   left: -130px;
   z-index: 1;
 }
+@media only screen and (max-width: 760px) {
+  .page .resume--bg__resume .page__resume .resume--content .pseudo--item--utas ::before {
+    width: 50px;
+    height: 50px;
+    top: 50px;
+    left: -60px;
+  }
+}
 .page .resume--bg__resume .page__resume .resume--content .pseudo--item--ict ::before {
   content: "";
   display: inline-block;
@@ -976,6 +1045,14 @@ img {
   top: 25px;
   left: -130px;
   z-index: 1;
+}
+@media only screen and (max-width: 760px) {
+  .page .resume--bg__resume .page__resume .resume--content .pseudo--item--ict ::before {
+    width: 50px;
+    height: 50px;
+    top: 50px;
+    left: -60px;
+  }
 }
 .page .resume--bg__resume .page__resume .resume--content .pseudo--item--buaa ::before {
   content: "";
@@ -992,6 +1069,14 @@ img {
   left: -130px;
   z-index: 1;
 }
+@media only screen and (max-width: 760px) {
+  .page .resume--bg__resume .page__resume .resume--content .pseudo--item--buaa ::before {
+    width: 50px;
+    height: 50px;
+    top: 50px;
+    left: -60px;
+  }
+}
 .page .resume--bg__resume .page__resume .resume--content .pseudo--item--dtt ::before {
   content: "";
   display: inline-block;
@@ -1006,6 +1091,14 @@ img {
   top: 25px;
   left: -130px;
   z-index: 1;
+}
+@media only screen and (max-width: 760px) {
+  .page .resume--bg__resume .page__resume .resume--content .pseudo--item--dtt ::before {
+    width: 50px;
+    height: 50px;
+    top: 50px;
+    left: -60px;
+  }
 }
 .page .resume--bg__resume .page__resume .resume--content .pseudo--item--ysu ::before {
   content: "";
@@ -1022,6 +1115,14 @@ img {
   left: -130px;
   z-index: 1;
 }
+@media only screen and (max-width: 760px) {
+  .page .resume--bg__resume .page__resume .resume--content .pseudo--item--ysu ::before {
+    width: 50px;
+    height: 50px;
+    top: 50px;
+    left: -60px;
+  }
+}
 .page .resume--bg__resume .page__resume .resume--content .pseudo--item--utas ::after {
   content: "";
   display: inline-block;
@@ -1032,6 +1133,12 @@ img {
   background-color: #2E2B2B;
   left: -40px;
   z-index: -1;
+}
+@media only screen and (max-width: 760px) {
+  .page .resume--bg__resume .page__resume .resume--content .pseudo--item--utas ::after {
+    width: 20px;
+    left: -20px;
+  }
 }
 .page .resume--bg__resume .page__resume .resume--content .pseudo--item--ict ::after {
   content: "";
@@ -1044,6 +1151,12 @@ img {
   left: -40px;
   z-index: -1;
 }
+@media only screen and (max-width: 760px) {
+  .page .resume--bg__resume .page__resume .resume--content .pseudo--item--ict ::after {
+    width: 20px;
+    left: -20px;
+  }
+}
 .page .resume--bg__resume .page__resume .resume--content .pseudo--item--buaa ::after {
   content: "";
   display: inline-block;
@@ -1054,6 +1167,12 @@ img {
   background-color: #2E2B2B;
   left: -40px;
   z-index: -1;
+}
+@media only screen and (max-width: 760px) {
+  .page .resume--bg__resume .page__resume .resume--content .pseudo--item--buaa ::after {
+    width: 20px;
+    left: -20px;
+  }
 }
 .page .resume--bg__resume .page__resume .resume--content .pseudo--item--dtt ::after {
   content: "";
@@ -1066,6 +1185,12 @@ img {
   left: -50px;
   z-index: -1;
 }
+@media only screen and (max-width: 760px) {
+  .page .resume--bg__resume .page__resume .resume--content .pseudo--item--dtt ::after {
+    width: 20px;
+    left: -20px;
+  }
+}
 .page .resume--bg__resume .page__resume .resume--content .pseudo--item--ysu ::after {
   content: "";
   display: inline-block;
@@ -1076,6 +1201,12 @@ img {
   background-color: #2E2B2B;
   left: -50px;
   z-index: -1;
+}
+@media only screen and (max-width: 760px) {
+  .page .resume--bg__resume .page__resume .resume--content .pseudo--item--ysu ::after {
+    width: 20px;
+    left: -20px;
+  }
 }
 .page .resume--bg__resume .page__resume .resume--content .skills-format {
   width: 49%;
@@ -1142,12 +1273,12 @@ img {
 .page .resume--bg__resume .page__resume .resume--content .skills-format .skills--block .skills--content--settings {
   width: 100%;
   height: 280px;
-  padding-left: 30px;
+  padding-left: 15px;
   margin-top: 32px;
 }
-@media only screen and (max-width: 1240px) {
+@media only screen and (max-width: 760px) {
   .page .resume--bg__resume .page__resume .resume--content .skills-format .skills--block .skills--content--settings {
-    padding-left: 50px;
+    font-size: 0.7em;
   }
 }
 .page .resume--bg__resume .page__resume .resume--content .skills-format .skills--block:hover {
@@ -1184,8 +1315,13 @@ img {
 .page__services #slidy-container {
   width: 100%;
   overflow: hidden;
-  margin: 0 auto;
-  height: 400px;
+  margin: auto;
+  height: 200px;
+}
+@media only screen and (max-width: 760px) {
+  .page__services #slidy-container {
+    height: 70px;
+  }
 }
 .page__blog {
   width: 100%;
@@ -1269,6 +1405,7 @@ img {
 .page__blog .box--size .row .column #img {
   margin-top: 8px;
   vertical-align: middle;
+  height: 400px;
   cursor: pointer;
 }
 .page__blog .box--size .row .column {
@@ -1281,7 +1418,7 @@ img {
   }
 }
 .page__blog .box--size .row .column .blog--item--img {
-  height: 500px;
+  height: 50vh;
   background-position: center top;
   background-size: cover;
   margin-bottom: 30px;
@@ -1312,7 +1449,7 @@ img {
   height: 100%;
   overflow: hidden;
   left: 0;
-  top: 300px;
+  top: 50px;
   color: #F1FF36;
   padding-left: 100%;
   transition: all 0.5s ease 0s;
