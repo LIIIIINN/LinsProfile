@@ -52,10 +52,13 @@ function smoothNav(className){
       
       case 0:
         navElement[i].addEventListener("click", function(){  
-          window.scrollTo({
-            top: 0,
-            behavior: 'smooth',
-          });
+          
+            setTimeout(function(){window.scrollTo({
+              top: 0,
+              behavior: 'smooth',
+            });
+          }, 1);
+          
         });
         break;
   
@@ -102,10 +105,13 @@ function downArrowClicking(){
 function scrollToPosition(elmnt, offset){
   var element = document.getElementById(elmnt);
   var elementPosition = element.getBoundingClientRect().top + window.scrollY - offset;
-  window.scrollTo({
+  
+  setTimeout(function(){
+    window.scrollTo({
       top: elementPosition,
       behavior: "smooth"
-  });
+    });
+  }, 1);
 }
 
 

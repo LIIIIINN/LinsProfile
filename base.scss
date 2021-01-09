@@ -49,6 +49,11 @@ h3{
     color: #0958b3;
 }
 
+//disable the button blue border
+button:focus {
+    outline:0;
+}
+
 
 a{
     text-decoration: none;
@@ -498,7 +503,6 @@ img {
             }
             //add pointer to the shortcut icon
             .nav--bar--mobile div:nth-child(2){
-
                 cursor:pointer;
             }
         }
