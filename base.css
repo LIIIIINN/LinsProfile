@@ -1212,7 +1212,7 @@ img {
     left: -20px;
   }
 }
-.page .resume--bg__resume .page__resume .resume--content .skills-format {
+.page .resume--bg__resume .page__resume .resume--content .skills--format {
   width: 49%;
   height: 250px;
   margin-top: 35px;
@@ -1225,74 +1225,66 @@ img {
   background-color: #2e2b2b;
 }
 @media only screen and (max-width: 1240px) {
-  .page .resume--bg__resume .page__resume .resume--content .skills-format {
+  .page .resume--bg__resume .page__resume .resume--content .skills--format {
     width: 100%;
   }
 }
-.page .resume--bg__resume .page__resume .resume--content .skills-format .skills--block {
+.page .resume--bg__resume .page__resume .resume--content .skills--format .skills--block {
   width: 100%;
-  height: auto;
-  margin-top: 80px;
+  height: inherit;
   transition: all 0.3s ease-in-out;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
 }
-.page .resume--bg__resume .page__resume .resume--content .skills-format .skills--block .icon--settings {
-  padding-top: 30px;
+.page .resume--bg__resume .page__resume .resume--content .skills--format .skills--block .icon--settings {
   width: 100%;
   height: 200px;
   background-size: cover;
-  margin-bottom: 40px;
-  margin-top: 80px;
 }
-.page .resume--bg__resume .page__resume .resume--content .skills-format .skills--block .icon--html {
+.page .resume--bg__resume .page__resume .resume--content .skills--format .skills--block .icon--html {
   background-image: url("./images/wallpapers/photo-1503252947848-7338d3f92f31.jpeg");
 }
-.page .resume--bg__resume .page__resume .resume--content .skills-format .skills--block .icon--css {
+.page .resume--bg__resume .page__resume .resume--content .skills--format .skills--block .icon--css {
   background-image: url("./images/wallpapers/photo-css.jpeg");
 }
-.page .resume--bg__resume .page__resume .resume--content .skills-format .skills--block .icon--js {
+.page .resume--bg__resume .page__resume .resume--content .skills--format .skills--block .icon--js {
   background-image: url("./images/wallpapers/photo-js.jpeg");
 }
-.page .resume--bg__resume .page__resume .resume--content .skills-format .skills--block .icon--db {
+.page .resume--bg__resume .page__resume .resume--content .skills--format .skills--block .icon--db {
   background-image: url("./images/skills/iconfinder_Database-Cloud_379336.png");
 }
-.page .resume--bg__resume .page__resume .resume--content .skills-format .skills--block .icon--network {
+.page .resume--bg__resume .page__resume .resume--content .skills--format .skills--block .icon--network {
   background-image: url("./images/wallpapers/photo-network.jpeg");
 }
-.page .resume--bg__resume .page__resume .resume--content .skills-format .skills--block .icon--c {
+.page .resume--bg__resume .page__resume .resume--content .skills--format .skills--block .icon--c {
   background-image: url("./images/wallpapers/photo-programming.jpeg");
 }
-.page .resume--bg__resume .page__resume .resume--content .skills-format .skills--block .icon--oop {
+.page .resume--bg__resume .page__resume .resume--content .skills--format .skills--block .icon--oop {
   background-image: url("./images/wallpapers/photo-oo.jpeg");
 }
-.page .resume--bg__resume .page__resume .resume--content .skills-format .skills--block .icon--test {
+.page .resume--bg__resume .page__resume .resume--content .skills--format .skills--block .icon--test {
   background-image: url("./images/wallpapers/photo-test.jpeg");
 }
-.page .resume--bg__resume .page__resume .resume--content .skills-format .skills--block .icon--db {
+.page .resume--bg__resume .page__resume .resume--content .skills--format .skills--block .icon--db {
   background-image: url("./images/wallpapers/photo-db.jpeg");
 }
-.page .resume--bg__resume .page__resume .resume--content .skills-format .skills--block .skills--content--settings {
+.page .resume--bg__resume .page__resume .resume--content .skills--format .skills--block .skills--content--settings {
   width: 100%;
-  height: 280px;
+  height: 250px;
   padding-left: 15px;
-  margin-bottom: 20px;
 }
 @media only screen and (max-width: 760px) {
-  .page .resume--bg__resume .page__resume .resume--content .skills-format .skills--block .skills--content--settings {
+  .page .resume--bg__resume .page__resume .resume--content .skills--format .skills--block .skills--content--settings {
     font-size: 0.7em;
-    height: 200px;
   }
 }
-.page .resume--bg__resume .page__resume .resume--content .skills-format .skills--block:hover {
-  margin-top: -220px;
-}
-@media only screen and (max-width: 760px) {
-  .page .resume--bg__resume .page__resume .resume--content .skills-format .skills--block:hover {
-    margin-top: -350px;
-  }
+.page .resume--bg__resume .page__resume .resume--content .skills--format .skills--block:hover {
+  margin-top: -400px;
+  /*@media only screen and (max-width: 760px) {
+      margin-top: -350px;
+  }   */
 }
 .page .resume--bg__resume .page__resume .resume--content .skills-format:hover {
   transition: all 0.3s;

@@ -7,6 +7,8 @@ $MARGIN--STANDARD: 50px;
 $PROGRESS--BAR--HEIGHT: 12px;
 $MOBILE--CONTENT--WIDTH: 80%;
 $BORDER--VALUE: 10px;
+$SKILLS--BOX--HEIGHT: 250px;
+$FULL--VIEW--WIDTH: 100%;
 
 //for responsive purposes
 $L--TRIGGER--POINT:1600px; // for my experience & my education: layout change to horizontal lines
@@ -120,7 +122,7 @@ img {
     content: "";
     top: 20px;
     left: 0;
-    width: 100%;
+    width: $FULL--VIEW--WIDTH;
     height: 5px;
     //background: #e7caa1;
     //background: linear-gradient(0.25turn, #a2d2ff, #ebf8e1, #bde0fe);
@@ -374,12 +376,12 @@ img {
 /*body style settings */
 
 .page{
-    width: 100%;
+    width: $FULL--VIEW--WIDTH;
     height: auto;
     //background-color: black;
 
     &__header{
-        width: 100%;
+        width: $FULL--VIEW--WIDTH;
         max-height: 80px;
         //background-color: white; //for test
         background: linear-gradient(0.25turn, #a2d2ff, #ebf8e1, #bde0fe);
@@ -424,7 +426,7 @@ img {
         //.nav--mobile--menu--open{
         #nav--bar--display{
 
-            width: 100%; //$MOBILE--CONTENT--WIDTH 
+            width: $FULL--VIEW--WIDTH; //$MOBILE--CONTENT--WIDTH 
             height: 0;  // 注意：设置高度动态效果 transition， 不能将高度设置为auto，不生效。 overflow一定要时刻都是hidden，不能将其变为visible，否则，效果会很奇怪。注意理解 hidden 和 visible 含义
             //background-color: black;
             
@@ -582,7 +584,7 @@ img {
                 height: auto;
 
                 @include responsiveLayoutAdjusting($M--TRIGGER--POINT){
-                    width: 100%;
+                    width: $FULL--VIEW--WIDTH;
                 }
             }
 
@@ -592,14 +594,14 @@ img {
                 position: relative;
 
                 @include responsiveLayoutAdjusting($M--TRIGGER--POINT){
-                    width: 100%;
+                    width: $FULL--VIEW--WIDTH;
                     margin-top: 30px;
                     margin-bottom: 10px;
                 }
 
                 .company{
 
-                    width: 100%;
+                    width: $FULL--VIEW--WIDTH;
                     height: auto;
                     display: flex;
                     flex-wrap: nowrap;
@@ -664,7 +666,7 @@ img {
                 }
 
                 .hr-line{
-                    width: 100%;
+                    width: $FULL--VIEW--WIDTH;
                     border-radius: 5px;
                     border-top: 5px solid #C8E6EF;
                     margin-top: 5px;
@@ -675,7 +677,7 @@ img {
                // flex-grow: 1;
                width: 35%;
                @include responsiveLayoutAdjusting($M--TRIGGER--POINT){
-                width: 100%;
+                width: $FULL--VIEW--WIDTH;
                 }
 
                 .btn--container{
@@ -824,7 +826,7 @@ img {
                 }
                 .social--media{
                     
-                    width: 100%;
+                    width: $FULL--VIEW--WIDTH;
                     display: flex;
                     flex-wrap: wrap;
                     justify-content:space-around;
@@ -844,7 +846,7 @@ img {
 
     .resume--bg__resume{
 
-        width: 100%;
+        width: $FULL--VIEW--WIDTH;
         height: auto;
         //background-image: url("./images/wallpapers/bg-img-overlay.png");
         //background-color: #c0e9da;
@@ -931,7 +933,7 @@ img {
                     }*/
 
                     @media only screen and (max-width: 760px) {
-                        width: 100%;
+                        width: $FULL--VIEW--WIDTH;
                         font-size: 0.7em;
                         margin-left: 30px;
                         padding: 5px;
@@ -982,7 +984,7 @@ img {
                       border-left-color: #262626;
                     }  
                     100% {
-                      width: 100%;
+                      width: $FULL--VIEW--WIDTH;
                       height: 100%;
                   /*     border: 2px solid #262626; */
                       border-top-color: transparent;
@@ -1020,7 +1022,7 @@ img {
                         border-left-color: transparent;
                     }
                     50% {
-                        width: 100%;
+                        width: $FULL--VIEW--WIDTH;
                         height: 0;
                   /*     border: 2px solid #262626; */
                         border-top-color: #262626;
@@ -1029,7 +1031,7 @@ img {
                         border-left-color: transparent;
                     }  
                     100% {
-                        width: 100%;
+                        width: $FULL--VIEW--WIDTH;
                         height: 100%;
                   /*     border: 2px solid #262626; */
                         border-top-color: #262626;
@@ -1409,14 +1411,10 @@ img {
                     
                 }
     
-                .skills-format{
+                .skills--format{
                     width: 49%;
-                    height: 250px;
-                    //border-radius: 75px;
-                    //border: 1px solid lightgray;
-                    //border-left: $BORDER--VALUE solid #C8E6EF;//#a2d2ff;
+                    height: $SKILLS--BOX--HEIGHT;
                     margin-top: 35px;
-                    //background-color: white;
                     overflow: hidden;
                     display: flex;
                     flex-wrap: wrap;
@@ -1427,34 +1425,25 @@ img {
 
     
                     @include responsiveLayoutAdjusting($M--TRIGGER--POINT){
-                        width: 100%;
+                        width: $FULL--VIEW--WIDTH;
                     } 
 
                     .skills--block{
 
-                        width: 100%;
-                        height: auto;
-                        //margin:0 auto;
-                        margin-top: 80px;
-                        //margin: 80px auto;
+                        width: $FULL--VIEW--WIDTH;
+                        height: inherit;
                         transition: all 0.3s ease-in-out;
-                        
                         display: flex;
                         flex-wrap: wrap;
                         justify-content: center;
                         align-items: center;
-                        //cursor: pointer;
+                        
                     
                         .icon--settings{
-                        
-                            padding-top: 30px;
-                            width: 100%;
-                            height: 200px;
-                            
+                            width: $FULL--VIEW--WIDTH;
+                            height: $SKILLS--BOX--HEIGHT - 50px;
                             background-size: cover;
-                            //background-position: center;
-                            margin-bottom: 40px;
-                            margin-top: 80px;
+                
                         }
 
                         .icon--html{
@@ -1494,23 +1483,24 @@ img {
                             background-image: url("./images/wallpapers/photo-db.jpeg");
                         }
                         .skills--content--settings{
-                            width: 100%;
-                            height: 280px;
+                            width: $FULL--VIEW--WIDTH;
+                            height: $SKILLS--BOX--HEIGHT;
                             padding-left: 15px;
-                            margin-bottom: 20px; 
+                            
+                            //margin-bottom: 20px; 
+                            //margin-top: 60px;
                             //background-color: #2e2b2b;
                             @media only screen and (max-width: 760px) {
                                 font-size: 0.7em;
-                                height: 200px;
                             }                            
                         }
                     }
 
                     .skills--block:hover{
-                        margin-top: -220px;
-                        @media only screen and (max-width: 760px) {
+                        margin-top: -400px;
+                        /*@media only screen and (max-width: 760px) {
                             margin-top: -350px;
-                        }          
+                        }   */       
                     }
                 }
                 .skills-format:hover{
@@ -1556,7 +1546,7 @@ img {
         }
         //external source 
         #slidy-container { 
-            width: 100%; 
+            width: $FULL--VIEW--WIDTH; 
             overflow: hidden; 
             margin: auto;
             height: 200px;
@@ -1568,7 +1558,7 @@ img {
 
     &__blog{
 
-        width: 100%;//$CONTENT--WIDTH;
+        width: $FULL--VIEW--WIDTH;//$CONTENT--WIDTH;
         height: auto;
         margin-top: $MARGIN--STANDARD; // for test, needs optimization
 
@@ -1645,7 +1635,7 @@ img {
                 -ms-flex-wrap: wrap; /* IE10 */
                 flex-wrap: wrap;
                 padding: 0 4px;
-                width: 100%;
+                width: $FULL--VIEW--WIDTH;
                 //height: 200px;
 
                  /* Create four equal columns that sits next to each other */
@@ -1666,7 +1656,7 @@ img {
                     @media screen and (max-width: $M--TRIGGER--POINT) {
                         //-ms-flex: 100%;
                         flex: 100%;
-                        max-width: 100%;
+                        max-width: $FULL--VIEW--WIDTH;
 
                     }
                     //position: relative;
@@ -1707,7 +1697,7 @@ img {
 
                         .blog-text{
                             position: absolute;
-                            width: 100%;
+                            width: $FULL--VIEW--WIDTH;
                             height: 100%;
                             overflow: hidden;
                             left: 0;
@@ -1734,7 +1724,7 @@ img {
                     .blog--item--img::after{
                         position: absolute;
                         content: '';
-                        width: 100%;
+                        width: $FULL--VIEW--WIDTH;
                         height: 100%;
                         left: 0;
                         top: 0;
@@ -1763,7 +1753,7 @@ img {
             .input--box--length{
                 width: 48%;
                 .input--settings{
-                    width: 100%;
+                    width: $FULL--VIEW--WIDTH;
                     background: #ebf8e1; 
                     border: none;
                     border-radius: 5px;
@@ -1774,7 +1764,7 @@ img {
                 width: 100%;
                 .message--settings{
                     min-height: 500px;
-                    width: 100%;
+                    width: $FULL--VIEW--WIDTH;
                     background: #ebf8e1; 
                     border: none;
                     border-radius: 5px;
