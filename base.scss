@@ -14,6 +14,7 @@ $FULL--VIEW--WIDTH: 100%;
 $L--TRIGGER--POINT:1600px; // for my experience & my education: layout change to horizontal lines
 $M--TRIGGER--POINT: 1240px; // for about & my skills: layout change to horizontal lines
 $S--TRIGGER--POINT:980px; // for nav bar: layout change to icon
+$MIN--S--TRIGGER--POINT: 760px;
 
 
 //for animation at first home page
@@ -111,7 +112,7 @@ img {
 .title--setting{
     position: relative;
     font-size: 4em;
-    @media only screen and (max-width: 760px) {
+    @media only screen and (max-width: $MIN--S--TRIGGER--POINT) {
         font-size: 3em;
     }
 
@@ -549,7 +550,7 @@ img {
 
         .landing--font--setting{
             color: whitesmoke;
-            @media only screen and (max-width: 760px) {
+            @media only screen and (max-width: $MIN--S--TRIGGER--POINT) {
                 font-size: 0.9em;
                 
             }
@@ -618,7 +619,7 @@ img {
                         //cursor: pointer;
                         border-radius: 50%;
 
-                        @media only screen and (max-width: 760px) {
+                        @media only screen and (max-width: $MIN--S--TRIGGER--POINT) {
                             width: 50px;
                             height: 50px;
                          }
@@ -675,8 +676,8 @@ img {
 
             .right--bar{
                // flex-grow: 1;
-               width: 35%;
-               @include responsiveLayoutAdjusting($M--TRIGGER--POINT){
+                width: 35%;
+                @include responsiveLayoutAdjusting($M--TRIGGER--POINT){
                 width: $FULL--VIEW--WIDTH;
                 }
 
@@ -715,7 +716,7 @@ img {
                         transition: 1s box-shadow;
                         cursor: pointer;
 
-                        @media only screen and (max-width: 760px) {
+                        @media only screen and (max-width: $MIN--S--TRIGGER--POINT) {
                             width: 100px;
                             height: 100px;
                         }
@@ -735,7 +736,7 @@ img {
                         border-radius: 75px;
                         z-index: -1;
                         animation: 1s clockwise infinite;
-                        @media only screen and (max-width: 760px) {
+                        @media only screen and (max-width: $MIN--S--TRIGGER--POINT) {
                             width: 100px;
                             height: 100px;
                         }
@@ -856,20 +857,16 @@ img {
         
         //z-index: -2;
         .page__resume{
-        
             width: $CONTENT--WIDTH;
             height: auto;
             margin: auto;
             margin-top: $MARGIN--STANDARD; // for test, needs optimization
             
-    
             .resume--content{
-    
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: space-between;
                 //align-items: center;
-    
                 margin-bottom: $MARGIN--STANDARD;
 
                 
@@ -932,7 +929,7 @@ img {
                         border-right: $BORDER--VALUE solid #C8E6EF;
                     }*/
 
-                    @media only screen and (max-width: 760px) {
+                    @media only screen and (max-width: $MIN--S--TRIGGER--POINT) {
                         width: $FULL--VIEW--WIDTH;
                         font-size: 0.7em;
                         margin-left: 30px;
@@ -1214,7 +1211,7 @@ img {
                     left: -130px;
                     z-index: 1;
 
-                    @media only screen and (max-width: 760px) {
+                    @media only screen and (max-width: $MIN--S--TRIGGER--POINT) {
                         width: 50px;
                         height: 50px;
                         top: 50px;
@@ -1238,7 +1235,7 @@ img {
                     top: 25px;
                     left: -130px;
                     z-index: 1;
-                    @media only screen and (max-width: 760px) {
+                    @media only screen and (max-width: $MIN--S--TRIGGER--POINT) {
                         width: 50px;
                         height: 50px;
                         top: 50px;
@@ -1262,7 +1259,7 @@ img {
                     top: 25px;
                     left: -130px;
                     z-index: 1;
-                    @media only screen and (max-width: 760px) {
+                    @media only screen and (max-width: $MIN--S--TRIGGER--POINT) {
                         width: 50px;
                         height: 50px;
                         top: 50px;
@@ -1285,7 +1282,7 @@ img {
                     top: 25px;
                     left: -130px;
                     z-index: 1;
-                    @media only screen and (max-width: 760px) {
+                    @media only screen and (max-width: $MIN--S--TRIGGER--POINT) {
                         width: 50px;
                         height: 50px;
                         top: 50px;
@@ -1307,7 +1304,7 @@ img {
                     top: 25px;
                     left: -130px;
                     z-index: 1;
-                    @media only screen and (max-width: 760px) {
+                    @media only screen and (max-width: $MIN--S--TRIGGER--POINT) {
                         width: 50px;
                         height: 50px;
                         top: 50px;
@@ -1327,7 +1324,7 @@ img {
                     left: -40px;
                     z-index: -1;
                     //box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
-                    @media only screen and (max-width: 760px) {
+                    @media only screen and (max-width: $MIN--S--TRIGGER--POINT) {
                         width: 20px;
                         left: -20px;
                     }
@@ -1344,7 +1341,7 @@ img {
                     left: -40px;
                     z-index: -1;
                     //box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
-                    @media only screen and (max-width: 760px) {
+                    @media only screen and (max-width: $MIN--S--TRIGGER--POINT) {
                         width: 20px;
                         left: -20px;
                         
@@ -1363,7 +1360,7 @@ img {
                     left: -40px;
                     z-index: -1;
                     //box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
-                    @media only screen and (max-width: 760px) {
+                    @media only screen and (max-width: $MIN--S--TRIGGER--POINT) {
                         width: 20px;
                         left: -20px;
                         
@@ -1384,7 +1381,7 @@ img {
                     z-index: -1;
                     //box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
 
-                    @media only screen and (max-width: 760px) {
+                    @media only screen and (max-width: $MIN--S--TRIGGER--POINT) {
                         width: 20px;
                         left: -20px;
                         
@@ -1403,7 +1400,7 @@ img {
                     left: -50px;
                     z-index: -1;
                     //box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
-                    @media only screen and (max-width: 760px) {
+                    @media only screen and (max-width: $MIN--S--TRIGGER--POINT) {
                         width: 20px;
                         left: -20px;
                         
@@ -1433,23 +1430,15 @@ img {
                         width: $FULL--VIEW--WIDTH;
                         height: inherit;
                         transition: all 0.3s ease-in-out;
-                        display: flex;
-                        flex-wrap: wrap;
-                        justify-content: center;
-                        align-items: center;
                         
-                    
                         .icon--settings{
                             width: $FULL--VIEW--WIDTH;
                             height: $SKILLS--BOX--HEIGHT - 50px;
                             background-size: cover;
-                
                         }
 
                         .icon--html{
                             background-image: url("./images/wallpapers/photo-1503252947848-7338d3f92f31.jpeg");
-                            
-
                         }
                         .icon--css{
                             background-image: url("./images/wallpapers/photo-css.jpeg");
@@ -1457,7 +1446,6 @@ img {
                         .icon--js{
 
                             background-image: url("./images/wallpapers/photo-js.jpeg");
-                            //border-radius: 75px;
                         }
 
                         .icon--db{
@@ -1486,21 +1474,14 @@ img {
                             width: $FULL--VIEW--WIDTH;
                             height: $SKILLS--BOX--HEIGHT;
                             padding-left: 15px;
-                            
-                            //margin-bottom: 20px; 
-                            //margin-top: 60px;
-                            //background-color: #2e2b2b;
-                            @media only screen and (max-width: 760px) {
+                            @media only screen and (max-width: $MIN--S--TRIGGER--POINT) {
                                 font-size: 0.7em;
                             }                            
                         }
                     }
 
                     .skills--block:hover{
-                        margin-top: -400px;
-                        /*@media only screen and (max-width: 760px) {
-                            margin-top: -350px;
-                        }   */       
+                        margin-top: -400px;    
                     }
                 }
                 .skills-format:hover{
@@ -1517,13 +1498,10 @@ img {
         height: auto;
         margin: auto;
         margin-top: $MARGIN--STANDARD; // for test, needs optimization
-
-
         .service--format{
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
-
 
             .progress--bar--container{
 
@@ -1550,7 +1528,7 @@ img {
             overflow: hidden; 
             margin: auto;
             height: 200px;
-            @media only screen and (max-width: 760px) {
+            @media only screen and (max-width: $MIN--S--TRIGGER--POINT) {
                 height: 70px;
             }   
         }

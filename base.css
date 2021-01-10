@@ -1233,10 +1233,6 @@ img {
   width: 100%;
   height: inherit;
   transition: all 0.3s ease-in-out;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
 }
 .page .resume--bg__resume .page__resume .resume--content .skills--format .skills--block .icon--settings {
   width: 100%;
@@ -1282,9 +1278,6 @@ img {
 }
 .page .resume--bg__resume .page__resume .resume--content .skills--format .skills--block:hover {
   margin-top: -400px;
-  /*@media only screen and (max-width: 760px) {
-      margin-top: -350px;
-  }   */
 }
 .page .resume--bg__resume .page__resume .resume--content .skills-format:hover {
   transition: all 0.3s;
