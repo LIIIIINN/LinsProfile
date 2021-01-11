@@ -4,30 +4,15 @@
 window.onscroll = function() {navBarShowing()};
 
 //documentElement.addEventListener("scroll", navBarShowing());
-
-
-
 //nav bar smooth scrolling to location
 smoothNav("desktop--nav");
-
 //arrow nav
 //document.getElementById("down--arrow").onclick = function() {downArrowClicking()};
 document.getElementById("down--arrow").addEventListener("click", downArrowClicking);
-
 //mobile nav
 document.getElementById("nav--mobile--icon").addEventListener("click", openMobileNavBar);
 //smoothNav("mobile--nav");
-
-
-//for test!
 showingLogoInfo();
-
-//animatingBlocks("edu--utas");
-//animatingBlocks("edu--ys");
-//animatingBlocks("edu--bh");
-
-
-
 
 
 
@@ -114,7 +99,6 @@ function scrollToPosition(elmnt, offset){
   }, 1);
 }
 
-
 function openMobileNavBar(){
   document.getElementById("nav--bar--display").style.height = "220px";
   closeMobileNavBar(); //close mobile menu if clicked ono option
@@ -133,10 +117,12 @@ function closeMobileNavBar(){
   smoothNav("mobile--nav");
 }
 
+function closeMobileNavBarStraightaway(){
 
+  document.getElementById("nav--bar--display").style.height = "0";
+}
 
 //scroll to an element and showing with animation 
-
 function animatingBlocks(elmnt){
 
 

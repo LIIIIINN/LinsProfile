@@ -16,7 +16,6 @@ $M--TRIGGER--POINT: 1240px; // for about & my skills: layout change to horizonta
 $S--TRIGGER--POINT:980px; // for nav bar: layout change to icon
 $MIN--S--TRIGGER--POINT: 760px;
 
-
 //for animation at first home page
 $BASIC--WIDTH--UNIT: 15px;
 $TIME--COUNTER: 10;
@@ -57,16 +56,14 @@ button:focus {
     outline:0;
 }
 
-
-a{
+.nav--animation, a{
     text-decoration: none;
     //color: #3fbbe0;
     color: black;
     position: relative;
 }
 
-
-a::before{
+.nav--animation::before{
     content: "";
     position: absolute;
     width: 0%;
@@ -77,13 +74,13 @@ a::before{
     transition: all 0.3s;
 }
 
-a:hover{
+.nav--animation:hover{
 
     color: lightgrey;
     transition: all 0.3s;
 }
 
-a:hover::before{
+.nav--animation:hover::before{
     width: 90%;
 }
 
@@ -92,7 +89,7 @@ img {
     background: transparent;
 }
 
-.bg--color--customized--blue{
+.text--box--setting{
 
     //background: linear-gradient(0.25turn, #a2d2ff, #ebf8e1, #bde0fe);
     //background-color: #C8E6EF;
@@ -108,15 +105,12 @@ img {
     box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
 }
 
-
 .title--setting{
     position: relative;
     font-size: 4em;
     @media only screen and (max-width: $MIN--S--TRIGGER--POINT) {
         font-size: 3em;
     }
-
-    
 }
 .pseudo--item--undersocre::before{
     position: absolute;
@@ -131,10 +125,6 @@ img {
     border-radius: 10px;
     //opacity: 0.5;
 }
-    
-
-
-
 /*
 .pseudo--item--undersocre::after{
     position: absolute;
@@ -149,7 +139,6 @@ img {
 }
 */
 
-
 .label--font--size{
 
     font-size: 1.5em;
@@ -161,7 +150,6 @@ img {
     padding: 5px;
     color: white;
 }
-
 
 .percentage--90{
 
@@ -179,9 +167,8 @@ img {
 
 .top--margin--value{
 
-    margin-top: 0px;
+    margin-top: 6px;
 }
-
 
 .column--flex--3{
     flex: 30%;
@@ -222,7 +209,6 @@ img {
         }
     }
     @else if $canvas==$M--TRIGGER--POINT{
-
         @media only screen and (max-width: $M--TRIGGER--POINT){
             @content;
         }
@@ -232,7 +218,6 @@ img {
             @content;
         }
     }
-    
 }
 
 @mixin navBarToMin ($canvas) {
@@ -251,7 +236,6 @@ img {
     }
     
 }
-
 
 .animation--initial{
     
@@ -289,7 +273,6 @@ img {
         animation-timing-function: ease-in-out;
     }
 }
-
 
 @keyframes nameShowing{
 
@@ -339,8 +322,6 @@ img {
     }
 }
 
-
-
 .sticky--to--top{
     //opacity: 1 !important;
     top: 0px !important;
@@ -372,10 +353,7 @@ img {
 }
 
 
-
-
 /*body style settings */
-
 .page{
     width: $FULL--VIEW--WIDTH;
     height: auto;
@@ -396,6 +374,7 @@ img {
         z-index: 100;
         transition: all 0.3s;
         //border-bottom: 3px solid #E7CAA1;
+        box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);   
 
         .nav--width--settings{
             width: $CONTENT--WIDTH;
@@ -420,34 +399,25 @@ img {
                 }
             }
         }
-        
-        
-        
-
-        //.nav--mobile--menu--open{
+        //for displaying menu list under mobile menu UI
         #nav--bar--display{
 
+            position: relative;
             width: $FULL--VIEW--WIDTH; //$MOBILE--CONTENT--WIDTH 
             height: 0;  // 注意：设置高度动态效果 transition， 不能将高度设置为auto，不生效。 overflow一定要时刻都是hidden，不能将其变为visible，否则，效果会很奇怪。注意理解 hidden 和 visible 含义
             //background-color: black;
-            
             background-color: white;
             color: white;
             //padding: 10px 0 20px 50px;
             padding-left: 10%;
-
-            
             display: flex; //change this flex block to a function later
             flex-direction: column;
             flex-wrap: wrap;
             justify-content: center;
-            //opacity: 0.7;
-            //background: transparent;
-            //background-color: white;
-            
-            font-size: 1.1em;
+            //font-size: 1.1em;
             overflow-y: hidden;
             transition: height 0.6s;
+            box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);   
             
             //display: none;
 
@@ -456,10 +426,33 @@ img {
                 //overflow-y: hidden !important;
                 height: 0 !important;
             }
+
+            .closebtn{
+                font-size: 2em;
+                position: absolute;
+                top: 10px;
+                right: 11%;
+                cursor: pointer;
+            }
         }
 
-        
+        #nav--bar--display::before{
 
+            position: absolute;
+            content: "";
+            top: 8%;
+            left: 8%;
+            width: 5px;
+            height: 180px;
+            //background: #e7caa1;
+            //background: linear-gradient(0.25turn, #a2d2ff, #ebf8e1, #bde0fe);
+            background: #E7CAA1;
+            border-radius: 10px;
+            //opacity: 0.5;
+            @media only screen and (max-width: $MIN--S--TRIGGER--POINT) {
+                left: 10%;
+            }
+        }
         @include navBarToMin($S--TRIGGER--POINT){
 
             //.nav--bar{
@@ -489,7 +482,7 @@ img {
                     height: 4px;
                     margin-bottom: 6px;
                     background: #000000;
-                    display: block;
+                    display: block;   
                 }
 
                 &--logo{
@@ -501,6 +494,7 @@ img {
                     background-size: cover;
                     border-radius: 50%;
                     margin-bottom: 10px;
+                    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
                 }
                 
             }
@@ -552,7 +546,6 @@ img {
             color: whitesmoke;
             @media only screen and (max-width: $MIN--S--TRIGGER--POINT) {
                 font-size: 0.9em;
-                
             }
         }
     }
@@ -608,12 +601,14 @@ img {
                     flex-wrap: nowrap;
                     flex-direction: row;
                     justify-content: space-evenly;
+                    margin-top: 30px;
 
                     .company--logo{   
                         width: 70px;
                         height: 70px;
                         //margin: 5px;
                         box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
+                        //border: 2px solid black;
                         position: relative;   
                         background-color: white;
                         //cursor: pointer;
@@ -719,6 +714,7 @@ img {
                         @media only screen and (max-width: $MIN--S--TRIGGER--POINT) {
                             width: 100px;
                             height: 100px;
+                            font-size: 15px;
                         }
                     }
                     .btn--format--download:hover{
@@ -832,6 +828,7 @@ img {
                     flex-wrap: wrap;
                     justify-content:space-around;
                     align-items: center;
+                    margin-top: 30px;
 
                     &--logo{  
                         width: 30px;
@@ -1204,7 +1201,7 @@ img {
                     background-position: center;
                     background-repeat: no-repeat;
                     border-radius: 50px;
-                    //box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
+                    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
                     width: 100px;
                     height: 100px;
                     top: 25px;
@@ -1225,6 +1222,7 @@ img {
                     display: inline-block;
                     position: absolute;
                     //background-color: #fff;
+                    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
                     background-image: url("./images/icons/zhongkeyuan.jpg");
                     background-size: cover;
                     background-position: center;
@@ -1249,6 +1247,7 @@ img {
                     display: inline-block;
                     position: absolute;
                     //background-color: #fff;
+                    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
                     background-image: url("./images/icons/beihang.png");
                     background-size: cover;
                     background-position: center;
@@ -1272,6 +1271,7 @@ img {
                     content: "";
                     display: inline-block;
                     position: absolute;
+                    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
                     background-image: url("./images/icons/DTT.png");
                     background-size: cover;
                     background-position: center;
@@ -1294,6 +1294,7 @@ img {
                     content: "";
                     display: inline-block;
                     position: absolute;
+                    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
                     background-image: url("./images/icons/Yanshan.png");
                     background-size: cover;
                     background-position: center;
@@ -1330,26 +1331,22 @@ img {
                     }
                 }
                 .pseudo--item--ict ::after{
-    
                     content: "";
                     display: inline-block;
                     position: absolute;
-                    width: 40px;
+                    width: 30px;
                     height: 2px;
                     top: 70px;
                     background-color: #2E2B2B;
-                    left: -40px;
+                    left: -30px;
                     z-index: -1;
                     //box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
                     @media only screen and (max-width: $MIN--S--TRIGGER--POINT) {
                         width: 20px;
                         left: -20px;
-                        
                     }
-                    
                 }
                 .pseudo--item--buaa ::after{
-    
                     content: "";
                     display: inline-block;
                     position: absolute;
@@ -1363,24 +1360,19 @@ img {
                     @media only screen and (max-width: $MIN--S--TRIGGER--POINT) {
                         width: 20px;
                         left: -20px;
-                        
                     }
-                    
                 }
-    
                 .pseudo--item--dtt ::after{
-    
                     content: "";
                     display: inline-block;
                     position: absolute;
-                    width: 50px;
+                    width: 30px;
                     height: 2px;
                     top: 70px;
                     background-color:  #2E2B2B;
-                    left: -50px;
+                    left: -30px;
                     z-index: -1;
                     //box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
-
                     @media only screen and (max-width: $MIN--S--TRIGGER--POINT) {
                         width: 20px;
                         left: -20px;
@@ -1389,7 +1381,6 @@ img {
                     
                 }
                 .pseudo--item--ysu ::after{
-    
                     content: "";
                     display: inline-block;
                     position: absolute;
@@ -1403,11 +1394,8 @@ img {
                     @media only screen and (max-width: $MIN--S--TRIGGER--POINT) {
                         width: 20px;
                         left: -20px;
-                        
                     }
-                    
                 }
-    
                 .skills--format{
                     width: 49%;
                     height: $SKILLS--BOX--HEIGHT;
@@ -1419,24 +1407,18 @@ img {
                     justify-content: center;
                     align-items: center;
                     background-color: #2e2b2b;
-
-    
                     @include responsiveLayoutAdjusting($M--TRIGGER--POINT){
                         width: $FULL--VIEW--WIDTH;
                     } 
-
                     .skills--block{
-
                         width: $FULL--VIEW--WIDTH;
                         height: inherit;
                         transition: all 0.3s ease-in-out;
-                        
                         .icon--settings{
                             width: $FULL--VIEW--WIDTH;
                             height: $SKILLS--BOX--HEIGHT - 50px;
                             background-size: cover;
                         }
-
                         .icon--html{
                             background-image: url("./images/wallpapers/photo-1503252947848-7338d3f92f31.jpeg");
                         }
@@ -1444,29 +1426,23 @@ img {
                             background-image: url("./images/wallpapers/photo-css.jpeg");
                         }
                         .icon--js{
-
                             background-image: url("./images/wallpapers/photo-js.jpeg");
                         }
-
                         .icon--db{
                             background-image: url("./images/skills/iconfinder_Database-Cloud_379336.png");
                         }
-
                         .icon--network{
-
                             background-image: url("./images/wallpapers/photo-network.jpeg");
                         }
                         .icon--c{
                             background-image: url("./images/wallpapers/photo-programming.jpeg");
                         }
                         .icon--oop{
-
                             background-image: url("./images/wallpapers/photo-oo.jpeg");
                         }
                         .icon--test{
                             background-image: url("./images/wallpapers/photo-test.jpeg");
                         }
-
                         .icon--db{
                             background-image: url("./images/wallpapers/photo-db.jpeg");
                         }
@@ -1479,7 +1455,6 @@ img {
                             }                            
                         }
                     }
-
                     .skills--block:hover{
                         margin-top: -400px;    
                     }
@@ -1502,18 +1477,14 @@ img {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
-
             .progress--bar--container{
-
                     width: 95%;
                     
                 .progress--bar{
                     width: inherit;
                     height: $PROGRESS--BAR--HEIGHT;
-
                     background: #E1E1E1;
                     margin-bottom: 30px;
-    
                     &--color{
                         height: $PROGRESS--BAR--HEIGHT;
                         //background: linear-gradient(0.25turn, #3774ad, #788f66, #3774ad);
