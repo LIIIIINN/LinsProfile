@@ -1166,7 +1166,7 @@ img {
   position: absolute;
   width: 40px;
   height: 2px;
-  top: 80px;
+  top: 70px;
   background-color: #2E2B2B;
   left: -40px;
   z-index: -1;
@@ -1224,8 +1224,8 @@ img {
 }
 @media only screen and (max-width: 760px) {
   .page .resume--bg__resume .page__resume .resume--content .pseudo--item--dtt ::after {
-    width: 20px;
-    left: -20px;
+    width: 10px;
+    left: -10px;
   }
 }
 .page .resume--bg__resume .page__resume .resume--content .pseudo--item--ysu ::after {
