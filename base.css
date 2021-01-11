@@ -382,7 +382,7 @@ img {
 }
 @media only screen and (max-width: 760px) {
   .page__header #nav--bar--display::before {
-    left: 10%;
+    left: 7%;
   }
 }
 @media only screen and (max-width: 980px) {

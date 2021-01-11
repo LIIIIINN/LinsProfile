@@ -450,7 +450,7 @@ img {
             border-radius: 10px;
             //opacity: 0.5;
             @media only screen and (max-width: $MIN--S--TRIGGER--POINT) {
-                left: 10%;
+                left: 7%;
             }
         }
         @include navBarToMin($S--TRIGGER--POINT){
