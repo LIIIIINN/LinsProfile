@@ -1,5 +1,9 @@
 /* application area -- based on native javascript  */
 
+
+/* application area -- based on native javascript for test */
+
+/* application area -- based on native javascript for test */
 //nav bar smooth showing when scrolled down to the half page of home
 window.onscroll = function() {navBarShowing()};
 
